@@ -1,0 +1,49 @@
+@import '../../../gulp/node_modules/normalize.css/normalize';
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.content {
+	flex: 1 1 auto;
+}
+.content,
+.header,
+.footer {
+	width: 100%;
+}
+
+.container {
+	max-width: $mediaWidthLaptop;
+	width: 100%;
+	margin: 0 auto;
+	@include media-tablet-horizontal {
+		max-width: 940px;
+	}
+	@include media-tablet {
+		padding: 0px 10px;
+	}
+}

@@ -1,0 +1,27 @@
+@import 'utils/variables';
+@import 'mixins/media';
+
+@import 'common/global';
+
+@import 'common/header';
+
+// Страницы и блоки
+
+@import 'common/footer';
+
+.header,
+.content,
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+}
+.header,
+.footer {
+	background: #413659;
+}
+.content {
+	background: #323131;
+}
