@@ -3,25 +3,11 @@
 
 @import 'common/global';
 
-@import 'common/header';
+@import 'common/buttons';
+@import 'common/text';
 
-// Страницы и блоки
+@import 'common/header';
 
 @import 'common/footer';
 
-.header,
-.content,
-.footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	color: #fff;
-}
-.header,
-.footer {
-	background: #413659;
-}
-.content {
-	background: #323131;
-}
+// Страницы и блоки

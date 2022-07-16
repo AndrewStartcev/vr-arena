@@ -29,6 +29,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-eslint": "^6.0.0",
     "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
     "gulp-npm-dist": "^1.0.3",
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^5.0.0",

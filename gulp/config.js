@@ -23,9 +23,6 @@ module.exports = {
       output: 'html'
     }
   },
-  copyDependencies: {
-    dist: path.join(src, 'local_modules')
-  }
 }
 
 //  http://192.168.0.102:3000

@@ -1,3 +1,45 @@
 header.header#header
   .container
-    p Шапка сайта
+    .header__wrapper
+      a.header__logo(href="#")
+        img(src="assets/img/logo.png", alt="")
+      .header__menu.menu
+        button.menu__close
+          span
+          span
+        .menu__container
+          a.menu__logo(href="")
+            img(src="assets/img/logo.png", alt="")
+          nav.menu__list
+            ul.menu-list
+              li.menu-item
+                a(href="#price") Прайс
+              li.menu-item
+                a(href="#game") Игры
+              li.menu-item
+                a(href="#faq") Вопросы и ответы
+              li.menu-item
+                a(href="#contacts") Контакты
+          button.btn.btn-smail.btn-outline.menu__btn
+            span Бронировать
+          .menu__contacts
+            .menu__link
+              img(src="assets/img/icons/location.svg", alt="")
+              span г. Иркутск, ул. Красноказачья 131А
+            .menu__link
+              img(src="assets/img/icons/time.svg", alt="")
+              span Ежедневно 09:00–23:00
+            a.menu__tel(href="#") +7 (3952) 93-18-20
+            .menu__social
+              a(href="#")
+                img(src="assets/img/icons/telegram.svg", alt="")
+              a(href="#")
+                img(src="assets/img/icons/vk.svg", alt="")
+      .header__contacts
+        a.header__tel(href="#") +7 (3952) 93-18-20
+        button.btn.btn-smail.btn-outline.header__btn
+          span Бронировать
+      button.header__burger
+        span
+        span
+        span

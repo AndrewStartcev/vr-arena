@@ -7,9 +7,16 @@ const shorthand = require('gulp-shorthand')
 const autoprefixer = require('gulp-autoprefixer')
 const gulpStylelint = require('gulp-stylelint')
 const rename = require("gulp-rename")
+const notify = require('gulp-notify');
 
 module.exports = function styles() {
   return gulp.src('../src/styles/*.scss')
+    .pipe(sass().on('error', notify.onError(
+      {
+        message: "<%= error.message %>",
+        title: "Scss Error!"
+      }))
+    )
     .pipe(plumber())
     .pipe(gulpStylelint({
       failAfterError: false,

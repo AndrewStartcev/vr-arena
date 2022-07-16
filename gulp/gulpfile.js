@@ -7,7 +7,6 @@ const script = require('../gulp/tasks/script')
 const fonts = require('../gulp/tasks/fonts')
 const imageMinify = require('../gulp/tasks/imageMinify')
 const clean = require('../gulp/tasks/clean')
-const copyDependencies = require('../gulp/tasks/copyDependencies')
 const svgSprite = require('../gulp/tasks/svgSprite')
 
 function setMode(isProduction = false) {
@@ -19,7 +18,7 @@ function setMode(isProduction = false) {
 
 const dev = gulp.parallel(pug2html, styles, script, fonts, imageMinify, svgSprite)
 
-const build = gulp.series(clean, copyDependencies, dev)
+const build = gulp.series(clean, dev)
 
 module.exports.start = gulp.series(setMode(), build, serve)
 module.exports.build = gulp.series(setMode(true), build)

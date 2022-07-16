@@ -25,13 +25,13 @@
 }
 
 @mixin media-mobile {
-	@media (min-width: ($mediaWidthMobileHorizontal - 0.2px)) {
+	@media (max-width: ($mediaWidthMobileHorizontal - 0.2px)) {
 		@content;
 	}
 }
 
 @mixin media-mobile-min {
-	@media (min-width: ($mediaWidthMobile - 0.2px)) {
+	@media (max-width: ($mediaWidthMobile - 0.2px)) {
 		@content;
 	}
 }

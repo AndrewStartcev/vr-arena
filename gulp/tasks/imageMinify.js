@@ -11,5 +11,5 @@ module.exports = function imageMinify() {
         plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
       }),
     ]))
-    .pipe(gulp.dest('../build/img/'))
+    .pipe(gulp.dest('../build/assets/img/'))
 }

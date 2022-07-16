@@ -10,18 +10,37 @@ html {
 	box-sizing: border-box;
 }
 
-body {
-	margin: 0;
-}
-
 img {
 	max-width: 100%;
 }
 
 a {
 	text-decoration: none;
+	transition: all 0.3s ease;
+	&:hover {
+		color: $pink;
+	}
+}
+a,
+button {
+	cursor: pointer;
+	color: inherit;
+	border: none;
 }
 
+body {
+	margin: 0;
+	font-family: 'Blogger Sans', sans-serif;
+	background: $indigoDark;
+	color: $white;
+	font-size: 18px;
+}
+section {
+	padding: 100px 0;
+	@include media-tablet {
+		padding: 80px 0;
+	}
+}
 .page {
 	display: flex;
 	flex-direction: column;
