@@ -1,3 +1,22 @@
 footer.footer#footer
-  .container
-    p Подвал сайта
+  .footer__content
+    h2 Контакты
+    .footer__links
+      .footer__link
+        img(src="assets/img/icons/location.png", alt="")
+        span г. Иркутск, ул. Красноказачья 131А
+      .footer__link
+        img(src="assets/img/icons/time.png", alt="")
+        span Ежедневно 09:00–23:00
+      .footer__contacts
+        a.footer__tel(href="#") +7 (3952) 93-18-20
+        .footer__social
+          a(href="#")
+            img(src="assets/img/icons/telegram.png", alt="")
+          a(href="#")
+            img(src="assets/img/icons/vk.png", alt="")
+    .footer__map
+      <iframe src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=8690483448" frameborder="0"></iframe>
+    .footer__bottom
+      p.footer__copyright © 2022 Внутри VR арена
+      a.footer__policy(href="#") Политика конфиденциальности

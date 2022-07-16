@@ -20,5 +20,5 @@ const dev = gulp.parallel(pug2html, styles, script, fonts, imageMinify, svgSprit
 
 const build = gulp.series(clean, dev)
 
-module.exports.start = gulp.series(setMode(), build, serve)
+module.exports.start = gulp.series(build, serve)
 module.exports.build = gulp.series(setMode(true), build)

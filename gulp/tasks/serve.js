@@ -21,7 +21,7 @@ module.exports = function serve(cb) {
     cors: true
   })
 
-  gulp.watch('../src/assets/img/*.{gif,png,jpg,svg,webp}', gulp.series(imageMinify, readyReload))
+  gulp.watch('../src/assets/img/**/*.{gif,png,jpg,svg,webp}', gulp.series(imageMinify, readyReload))
   gulp.watch('../src/assets/img/sprite/*.svg', gulp.series(svgSprite, readyReload))
   gulp.watch('../src/styles/**/*.scss', gulp.series(style, cb => gulp.src('../build/assets/css').pipe(server.stream()).on('end', cb)))
   gulp.watch('../src/assets/js/**/*.js', gulp.series(script, readyReload))
