@@ -3,7 +3,7 @@ $(document).ready(() => {
   const menu = $('.menu')
   const menuClose = $('.menu__close');
   const menuItem = $('.menu a, .menu .btn')
-  const active = 'active'
+  const active = 'active';
 
   burger.click(() => {
     menu.addClass(active);
@@ -57,7 +57,17 @@ $(document).ready(() => {
       };
     }
   }
+
   xDown = null;
   yDown = null;
+
+  $(window).scroll(function () {
+    var height = $(window).scrollTop();
+    if (height > 50) {
+      $('header').addClass('header-bg');
+    } else {
+      $('header').removeClass('header-bg');
+    }
+  });
 
 })

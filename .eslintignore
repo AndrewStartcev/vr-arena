@@ -1,5 +1,2 @@
-build
-gulpfiles.js
-
+/build
 /gulp
-/src/local_modules

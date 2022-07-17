@@ -8,7 +8,6 @@ module.exports = function script() {
   return gulp.src('../src/assets/js/main.js')
     .pipe(plumber())
     .pipe(webpack({
-      mode: process.env.NODE_ENV,
       output: {
         filename: '[name].min.js',
       },
