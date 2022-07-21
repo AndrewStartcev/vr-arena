@@ -1,0 +1,285 @@
+.games {
+	background: #19031d url('../img/bg_stars.png') center center / cover no-repeat;
+	position: relative;
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: url('../img/lines_neon_2.png') center center / contain no-repeat;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 30px;
+		position: relative;
+		z-index: 1;
+		h2 {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	&__links {
+		a {
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 140%;
+			color: #f8e3fc;
+			margin-left: 29px;
+			&.active {
+				color: $pink;
+			}
+		}
+	}
+}
+.games-tab {
+	display: none;
+	position: relative;
+	&.active {
+		display: block;
+	}
+	&__head {
+		margin-bottom: 50px;
+		position: relative;
+		z-index: 1;
+		a {
+			display: inline-flex;
+			padding: 16px 28px;
+			border: 1px solid #555fe1;
+			border-radius: 30px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 140%;
+			color: #f8e3fc;
+			opacity: 0.5;
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover {
+				opacity: 1;
+			}
+			&.active {
+				background: #020747;
+				border: 1px solid #555fe1;
+				opacity: 1;
+			}
+		}
+	}
+	&__content {
+		max-width: 585px;
+		position: relative;
+		z-index: 1;
+		p {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 140%;
+			color: rgba(248, 227, 252, 0.7);
+		}
+		.btn {
+			margin: 0;
+			margin-top: 50px;
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 35px;
+	}
+	&__item {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-right: 30px;
+		&:last-child {
+			margin-right: 0;
+		}
+		img,
+		p {
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			margin-right: 10px;
+			width: 32px;
+			height: 32px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 140%;
+			color: #f8e3fc;
+		}
+	}
+	&__images {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -120px;
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(72.38% 63.63% at 48.84% 40.71%, rgba(21, 3, 27, 0) 0%, #15031b 92.63%);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		img {
+			width: 943px;
+			height: 692px;
+		}
+	}
+}
+@include media-tablet-horizontal {
+	.games-tab {
+		&__images {
+			img {
+				width: 605px;
+				height: 690px;
+				object-fit: cover;
+				object-position: left center;
+			}
+		}
+	}
+}
+@include media-tablet {
+	.games {
+		padding: 80px 0;
+		&__head {
+			align-items: center;
+			h2 {
+				max-width: 340px;
+				font-weight: 700;
+				font-size: 44px;
+				line-height: 140%;
+			}
+		}
+		&__links {
+			flex: 0 0 auto;
+			a {
+				font-size: 20px;
+			}
+		}
+	}
+	.games-tab {
+		&__game {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		&__head {
+			margin-bottom: 40px;
+		}
+		&__content {
+		}
+		&__images {
+			margin-bottom: 20px;
+			position: relative;
+			top: auto;
+			left: auto;
+			right: auto;
+			transform: translate(0);
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+@include media-mobile {
+	.games {
+		&__head {
+			h2 {
+				max-width: 240px;
+				font-size: 38px;
+			}
+		}
+		&__links {
+			flex: 0 0 auto;
+			a {
+				font-size: 16px;
+				margin-left: 15px;
+			}
+		}
+	}
+	.games-tab {
+		&__head {
+			margin-bottom: 40px;
+			a {
+				font-size: 12px;
+				padding: 12px 22px;
+				margin-right: 15px;
+				border-radius: 16px;
+			}
+		}
+		&__content {
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+}
+@include media-mobile-min {
+	.games {
+		padding: 70px 0;
+		&__head {
+			margin-bottom: 30px;
+			h2 {
+				max-width: 179px;
+				font-size: 32px;
+			}
+		}
+		&__links {
+			display: flex;
+			align-items: flex-end;
+			flex-direction: column;
+			a {
+				font-size: 16px;
+				margin-left: 0px;
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.games-tab {
+		&__head {
+			margin-bottom: 40px;
+			a {
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+		}
+		&__content {
+			h3 {
+				margin-top: -35px;
+				font-size: 32px;
+			}
+			p {
+				font-size: 14px;
+			}
+			.btn {
+				margin-top: 40px;
+			}
+		}
+		&__list {
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+		&__item {
+			margin-right: 20px;
+			&:last-child {
+				margin-right: 0;
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
