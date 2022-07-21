@@ -61,13 +61,17 @@ $(document).ready(() => {
   xDown = null;
   yDown = null;
 
+  scrollHeader()
   $(window).scroll(function () {
+    scrollHeader()
+  });
+  function scrollHeader() {
     var height = $(window).scrollTop();
     if (height > 50) {
       $('header').addClass('header-bg');
     } else {
       $('header').removeClass('header-bg');
     }
-  });
+  }
 
 })
