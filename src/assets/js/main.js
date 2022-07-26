@@ -91,8 +91,10 @@ $(document).ready(() => {
 
   document.addEventListener("scroll", (e) => {
     var el = document.querySelector(".price-game");
+    var el2 = document.querySelector(".price");
     var inViewport = elementInViewport(el);
-    if (inViewport) {
+    var inViewport2 = elementInViewport(el2);
+    if (inViewport || inViewport2) {
       $('body').addClass('no-swipe')
     } else {
       $('body').removeClass('no-swipe')

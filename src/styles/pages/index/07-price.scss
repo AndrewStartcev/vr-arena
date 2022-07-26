@@ -1,0 +1,136 @@
+.price {
+	padding: 50px 0px 100px;
+	h2 {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__table {
+		min-width: 1100px;
+		margin: 0 auto;
+		background: #210626;
+		border: 10px solid #31073a;
+		border-radius: 50px;
+		box-shadow: 0px 40px 100px -30px #31073a;
+		margin-bottom: 30px;
+	}
+	&__header {
+		padding: 30px 45px 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 10px solid #31073a;
+	}
+
+	&__th {
+		flex: 1 1 33.333%;
+		text-align: center;
+		&:first-child {
+			text-align: left;
+		}
+		p {
+			padding: 0;
+			margin: 0;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 140%;
+		}
+	}
+	&__tr {
+		padding: 20px 45px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #31073a;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&__td {
+		flex: 1 1 33.333%;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:first-child {
+			justify-content: flex-start;
+			text-align: left;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 140%;
+		}
+		span {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 140%;
+			color: #ffab2d;
+			text-align: center;
+		}
+		span.star {
+			width: 32px;
+			height: 32px;
+			background: url('../img/icons/star.png') center center / contain no-repeat;
+		}
+	}
+	&__footer {
+		border-top: 10px solid #31073a;
+		padding: 0px 0px 25px;
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		p {
+			padding: 0;
+			margin: 0;
+			margin-bottom: 20px;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 140%;
+			text-align: center;
+			color: rgba(248, 227, 252, 0.5);
+		}
+		.btn {
+			margin-top: 15px;
+		}
+	}
+}
+
+@include media-tablet-horizontal {
+	.price {
+		.container {
+			overflow: auto;
+		}
+		&__table {
+			box-shadow: none;
+		}
+	}
+}
+
+@include media-mobile {
+	.price {
+		padding-top: 0px;
+		padding-bottom: 80px;
+		h2 {
+			margin-bottom: 30px;
+		}
+		&__info {
+			p {
+				font-size: 14px;
+				max-width: 90%;
+				margin: 0 auto;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
